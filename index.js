@@ -9,7 +9,7 @@ const OWM_TOKEN = 'c4c9a18775fbff72969d0ced4111a00b';
 
 // Endpoints
 app.get('/api/get-pollution-data', async (req, res) => {
-    if (!req.query.lat || !req.query.lon || !req.query.appid) {
+    if (!req.query.lat || !req.query.lon) {
         res.status(400).json("Error: Missing parameter for lat or lon")
     }
     else {
