@@ -5,7 +5,6 @@ const port = 5000;
 
 
 app.use(express.json());
-const OWM_TOKEN = 'bd5e378503939ddaee76f12ad7a97608';
 
 // Endpoints
 app.get('/api/get-pollution-data', async (req, res) => {
@@ -22,7 +21,7 @@ app.get('/api/get-pollution-data', async (req, res) => {
                     // lon: -75.1664401,
                     lat: req.query.lat,
                     lon: req.query.lon,
-                    appid: OWM_TOKEN
+                    appid: req.query.appid
                 }
             });
 
