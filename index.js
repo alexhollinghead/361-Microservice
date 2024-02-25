@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-const port = 4000;
+const port = 5000;
 
 
 app.use(express.json());
@@ -43,3 +43,6 @@ app.get('/api/get-pollution-data', async (req, res) => {
 app.listen(port, () => {
     console.log(`Microservice listening on port ${port}...`);
 });
+
+// Export the Express API
+module.exports = app;
