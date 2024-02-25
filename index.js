@@ -5,11 +5,12 @@ const port = 5000;
 
 
 app.use(express.json());
+const OWM_TOKEN = 'c4c9a18775fbff72969d0ced4111a00b';
 
 // Endpoints
 app.get('/api/get-pollution-data', async (req, res) => {
     if (!req.query.lat || !req.query.lon || !req.query.appid) {
-        res.status(400).json("Error: Missing parameter for lat, lon, or appid.")
+        res.status(400).json("Error: Missing parameter for lat or lon")
     }
     else {
         try {
@@ -21,7 +22,7 @@ app.get('/api/get-pollution-data', async (req, res) => {
                     // lon: -75.1664401,
                     lat: req.query.lat,
                     lon: req.query.lon,
-                    appid: req.query.appid
+                    appid: OWM_TOKEN
                 }
             });
 
