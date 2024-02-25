@@ -1,9 +1,10 @@
 const express = require('express');
 const axios = require('axios');
+var cors = require('cors')
 const app = express();
 const port = 5000;
 
-
+app.use(cors())
 app.use(express.json());
 const OWM_TOKEN = 'c4c9a18775fbff72969d0ced4111a00b';
 
