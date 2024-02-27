@@ -31,7 +31,7 @@ The service takes two parameters:
 Example:
 
 ```javascript
-curl "http://localhost:4000/api/get-pollution-data?lat=${lat}&lon=${lon}"
+curl "http://localhost:4000/api/get-pollution-data?lat=39.9598876&lon=-75.1664401"
 ```
 
 A live demo of the service is available at:
