@@ -31,7 +31,7 @@ The service takes two parameters:
 Example:
 
 ```javascript
-curl "localhost:8080/weather_microservice?lat=37.7749&lon=122.4194"
+curl "http://localhost:4000/api/get-pollution-data?lat=${lat}&lon=${lon}"
 ```
 
 A live demo of the service is available at:
